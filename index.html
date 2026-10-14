@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PriceSage – Smart Product Recommendations & Price Comparison</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top"><div class="logo">Price<i>Sage</i></div><button class="ghost" id="theme" aria-label="Toggle theme">Theme</button></header>
+
+<section class="hero">
+<h1>Say what you need. We'll find the best buy.</h1>
+<p>Describe the product, your budget and what matters to you. PriceSage ranks products by rating, value and feature fit, then compares prices across five stores.</p>
+<div class="ask"><input id="q" placeholder="e.g. gaming laptop under 80000 with good battery" aria-label="What do you need?"><button class="go" id="go">Recommend</button></div>
+<div class="chips" id="chips"></div>
+<div class="insight" id="insight"></div>
+</section>
+
+<div class="layout">
+<aside>
+<label for="cat">Category</label><select id="cat"></select>
+<label for="sort">Sort by</label><select id="sort"><option value="ai">Best match</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="rate">Rating</option><option value="save">Biggest saving</option></select>
+<label for="max">Max budget: <span id="maxv"></span></label><input type="range" id="max" min="2000" max="150000" step="1000" value="150000">
+<label><input type="checkbox" id="saved"> Saved items only</label>
+</aside>
+<main><div id="notice"></div><div class="grid" id="grid" aria-live="polite"></div></main>
+</div>
+
+<section class="panel" id="cmp" hidden><h2 style="margin-bottom:10px">Side-by-side comparison</h2><div class="scroll" id="cmpbody"></div></section>
+</div>
+<dialog id="dlg"><div class="dlg" id="dlgbody"></div></dialog>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
