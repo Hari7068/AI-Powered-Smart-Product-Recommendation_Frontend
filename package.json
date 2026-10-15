@@ -1,0 +1,8 @@
+{
+  "name": "pricesage-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx --yes http-server . -p 8080"
+  }
+}
