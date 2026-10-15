@@ -1,2 +1,1 @@
-// Point this at your running backend.
-window.API_BASE = "http://localhost:3000";
+window.API_BASE = "https://ai-powered-smart-product-recommendation.onrender.com";
